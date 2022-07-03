@@ -1,0 +1,53 @@
+{
+  "get_logs": {
+      "url": "https://api.test.io/api?module=logs&action=getLogs&fromBlock=2217100&toBlock=2217200&address=0xDc3A9Db694BCdd55EBaE4A89B22aC6D12b3F0c24&topic0=0xe65b00b698ba37c614af350761c735c5f4a82b4ab365a1f1022d49d9dfc8e930&topic0_1_opr=or&topic1=0x000000000000000000000000754c50465885f1ed1fa1a55b95ee8ecf3f1f4324&apikey=TEST",
+      "kwargs": {
+          "from_block": 2217100,
+          "to_block": 2217200,
+          "address": "0xDc3A9Db694BCdd55EBaE4A89B22aC6D12b3F0c24",
+          "topic_0": "0xe65b00b698ba37c614af350761c735c5f4a82b4ab365a1f1022d49d9dfc8e930",
+          "topic_0_1_opr": "or",
+          "topic_1": "0x000000000000000000000000754c50465885f1ed1fa1a55b95ee8ecf3f1f4324"
+      },
+      "response": {
+          "status": "1",
+          "message": "OK",
+          "result": [
+              {
+                  "address": "0xdc3a9db694bcdd55ebae4a89b22ac6d12b3f0c24",
+                  "topics": [
+                      "0xe65b00b698ba37c614af350761c735c5f4a82b4ab365a1f1022d49d9dfc8e930",
+                      "0x000000000000000000000000754c50465885f1ed1fa1a55b95ee8ecf3f1f4324",
+                      "0x296c7fb6ccafa3e689950b947c2895b07357c95b066d5cdccd58c301f41359a3"
+                  ],
+                  "data": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                  "blockNumber": "0x21d4ec",
+                  "timeStamp": "0x57d06567",
+                  "gasPrice": "0x4a817c800",
+                  "gasUsed": "0x42e1d",
+                  "logIndex": "0x",
+                  "transactionHash": "0xfe1289fd3915794b99702202f65eea2e424b2f083a12749d29b4dd51f6dce40d",
+                  "transactionIndex": "0x1"
+              }
+          ]
+      },
+      "assertion": [
+          {
+              "address": "0xdc3a9db694bcdd55ebae4a89b22ac6d12b3f0c24",
+              "topics": [
+                  "0xe65b00b698ba37c614af350761c735c5f4a82b4ab365a1f1022d49d9dfc8e930",
+                  "0x000000000000000000000000754c50465885f1ed1fa1a55b95ee8ecf3f1f4324",
+                  "0x296c7fb6ccafa3e689950b947c2895b07357c95b066d5cdccd58c301f41359a3"
+              ],
+              "data": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "blockNumber": "0x21d4ec",
+              "timeStamp": "0x57d06567",
+              "gasPrice": "0x4a817c800",
+              "gasUsed": "0x42e1d",
+              "logIndex": "0x",
+              "transactionHash": "0xfe1289fd3915794b99702202f65eea2e424b2f083a12749d29b4dd51f6dce40d",
+              "transactionIndex": "0x1"
+          }
+      ]
+  }
+}

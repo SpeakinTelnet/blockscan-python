@@ -1,0 +1,63 @@
+{
+  "get_block_reward_by_block_number": {
+      "url": "https://api.test.io/api?module=block&action=getblockreward&blockno=2150000&apikey=TEST",
+      "kwargs": {
+          "block_no": "2150000"
+      },
+      "response": {
+          "status": "1",
+          "message": "OK",
+          "result": {
+              "blockNumber": "2150000",
+              "timeStamp": "1472313878",
+              "blockMiner": "0x2a65aca4d5fc5b5c859090a6c34d164135398226",
+              "blockReward": "5001628781000000000",
+              "uncles": [],
+              "uncleInclusionReward": "0"
+          }
+      },
+      "assertion": {
+          "blockNumber": "2150000",
+          "timeStamp": "1472313878",
+          "blockMiner": "0x2a65aca4d5fc5b5c859090a6c34d164135398226",
+          "blockReward": "5001628781000000000",
+          "uncles": [],
+          "uncleInclusionReward": "0"
+      }
+  },
+  "get_est_block_countdown_time_by_block_number": {
+      "url": "https://api.test.io/api?module=block&action=getblockcountdown&blockno=105000000&apikey=TEST",
+      "kwargs": {
+          "block_no": "105000000"
+      },
+      "response": {
+          "status": "1",
+          "message": "OK",
+          "result": {
+              "CurrentBlock": "15041698",
+              "CountdownBlock": "105000000",
+              "RemainingBlock": "89958302",
+              "EstimateTimeInSec": "1448328677.2"
+          }
+      },
+      "assertion": {
+          "CurrentBlock": "15041698",
+          "CountdownBlock": "105000000",
+          "RemainingBlock": "89958302",
+          "EstimateTimeInSec": "1448328677.2"
+      }
+  },
+  "get_block_number_by_timestamp": {
+      "url": "https://api.test.io/api?module=block&action=getblocknobytime&timestamp=1601510400&closest=before&apikey=TEST",
+      "kwargs": {
+          "timestamp": "1601510400",
+          "closest": "before"
+      },
+      "response": {
+          "status": "1",
+          "message": "OK",
+          "result": "10966873"
+      },
+      "assertion": "10966873"
+  }
+}

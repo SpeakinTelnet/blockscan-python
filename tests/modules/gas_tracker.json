@@ -1,0 +1,38 @@
+{
+    "get_est_confirmation_time": {
+        "url": "https://api.test.io/api?module=gastracker&action=gasestimate&gasPrice=2000000000&apikey=TEST",
+        "kwargs": {
+            "gas_price": 2000000000
+        },
+        "response": {
+            "status": "1",
+            "message": "OK",
+            "result": "3615"
+        },
+        "assertion": "3615"
+    },
+    "get_gas_oracle": {
+        "url": "https://api.test.io/api?module=gastracker&action=gasoracle&apikey=TEST",
+        "kwargs": {},
+        "response": {
+            "status": "1",
+            "message": "OK",
+            "result": {
+                "LastBlock": "15053255",
+                "SafeGasPrice": "47",
+                "ProposeGasPrice": "48",
+                "FastGasPrice": "48",
+                "suggestBaseFee": "46.903872221",
+                "gasUsedRatio": "0.361302006914608,0.654472591184179,0.181670004589873,0.370944201261042,0.185875091989866"
+            }
+        },
+        "assertion": {
+            "LastBlock": "15053255",
+            "SafeGasPrice": "47",
+            "ProposeGasPrice": "48",
+            "FastGasPrice": "48",
+            "suggestBaseFee": "46.903872221",
+            "gasUsedRatio": "0.361302006914608,0.654472591184179,0.181670004589873,0.370944201261042,0.185875091989866"
+        }
+    }
+}

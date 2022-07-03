@@ -1,0 +1,36 @@
+{
+  "get_tx_receipt_status": {
+      "url": "https://api.test.io/api?module=transaction&action=gettxreceiptstatus&txhash=0xf38bd9a1b0bb5a5a4915ba48739492a427f3faf4dd64c7b9560f3056014f4f0d&apikey=TEST",
+      "kwargs": {
+          "txhash": "0xf38bd9a1b0bb5a5a4915ba48739492a427f3faf4dd64c7b9560f3056014f4f0d"
+      },
+      "response": {
+          "status": "1",
+          "message": "OK",
+          "result": {
+              "status": "1"
+          }
+      },
+      "assertion": {
+          "status": "1"
+      }
+  },
+  "get_contract_execution_status": {
+    "url": "https://api.test.io/api?module=transaction&action=getstatus&txhash=0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a&apikey=TEST",
+    "kwargs": {
+        "txhash": "0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a"
+    },
+    "response": {
+        "status": "1",
+        "message": "OK",
+        "result": {
+            "isError": "1",
+            "errDescription": "Bad jump destination"
+        }
+    },
+    "assertion": {
+        "isError": "1",
+        "errDescription": "Bad jump destination"
+    }
+  }
+}
