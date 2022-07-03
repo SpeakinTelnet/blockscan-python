@@ -1,0 +1,71 @@
+version: 2.1
+workflows:
+  build_and_deploy:
+    jobs:
+      - test:
+          name: "test_38"
+          version: "3.8"
+      - test:
+          name: "test_39"
+          version: "3.9"
+      - test:
+          name: "test_310"
+          version: "3.10"
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - test_310
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
+jobs:
+  test:
+    parameters:
+      version:
+        type: string
+        default: latest
+    docker:
+      - image: cimg/python:<< parameters.version >>
+    steps:
+      - checkout
+      - run:
+          name: install python dependencies
+          command: |
+            pip install nox
+      - run:
+          name: run tests
+          command: |
+            nox --python << parameters.version >>
+  deploy:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: install python dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install twine wheel
+      - run:
+          name: init .pypirc
+          command: |
+            echo -e "[distutils]" >> ~/.pypirc
+            echo -e "index-servers = pypi" >> ~/.pypirc
+            echo -e "[testpypi]" >> ~/.pypirc
+            echo -e "username = __token__" >> ~/.pypirc
+            echo -e "password = $PYPI_BLOCKSCAN_PYTHON_API" >> ~/.pypirc
+      - run:
+          name: create package
+          command: |
+            . venv/bin/activate
+            python setup.py sdist bdist_wheel
+      - run:
+          name: upload to pypi
+          command: |
+            . venv/bin/activate
+            twine upload --verbose --repository pypi dist/* 
