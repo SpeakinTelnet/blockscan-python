@@ -1,11 +1,32 @@
 from typing import Dict, Callable
-from blockscan.modules import Module
+from blockscan.modules import (
+    Module,
+    ProAccounts,
+    ProBlocks,
+    ProContracts,
+    ProLogs,
+    ProProxy,
+    ProStats,
+    ProTokens,
+    ProTransactions,
+    ProGasTracker,
+)
 from blockscan.blockchains import blockchains
 from blockscan.exception import ChainIDError
 
 
 class BaseConnection:
     """Base connection class"""
+
+    accounts = ProAccounts
+    blocks = ProBlocks
+    contracts = ProContracts
+    logs = ProLogs
+    proxy = ProProxy
+    stats = ProStats
+    tokens = ProTokens
+    transactions = ProTransactions
+    gas_tracker = ProGasTracker
 
     def __init__(
         self,
