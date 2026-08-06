@@ -87,45 +87,15 @@ But will default to *Async* if no parameter is provided:
 
 The full list of parameters is available in the `documentation <https://blockscan-python.readthedocs.io/usage.html#create-a-connection>`_
 
-
-
-Donate 
-------
-
-I made this has a fun side project and it's free for anyone to use.
-If you like it and wish to donate here's a few of my crypto wallets. 
-
-.. _tbl-grid:
-
-+----------------------------------------+--------------------------------------+-----------------------------------------+
-| Ethereum and L2s (0x29006...)          | Monero (85tBS7YSrM5...)              | Peercoin (PBzj1ZwMDW...)                |
-|                                        |                                      |                                         |
-+========================================+======================================+=========================================+
-| |EthereumQR|                           | |MoneroQR|                           | |PeercoinQR|                            |
-+----------------------------------------+--------------------------------------+-----------------------------------------+
-
-.. |EthereumQR| image:: https://raw.githubusercontent.com/SpeakinTelnet/blockscan-python/master/docs/_qrcodes/ethereum.png
-  :width: 300
-  :alt: EthereumQR
-
-.. |MoneroQR| image:: https://raw.githubusercontent.com/SpeakinTelnet/blockscan-python/master/docs/_qrcodes/monero.png
-  :width: 300
-  :alt: MoneroQR
-
-.. |PeercoinQR| image:: https://raw.githubusercontent.com/SpeakinTelnet/blockscan-python/master/docs/_qrcodes/peercoin.png
-  :width: 300
-  :alt: PeerCoinQR
-
-* Free software: MIT license
-* Documentation: https://blockscan-python.readthedocs.io.
-
 Credits
 -------
 
 Credits to `@pcko1 <https://github.com/pcko1>`_ for making the 
 bscscan-python that was used as the base for this package
 
-TO-DOs
-------
+License
+-------
 
-- Add a reference table of the available Chain ID to the docs
+This project is licensed under the `MIT License <https://codeberg.org/SpeakinTelnet/Homelab-IaC/src/branch/main/LICENSE>`_
+
+⊂(▀¯▀⊂) `Donate <https://codeberg.org/SpeakinTelnet/.profile/src/branch/main/DONATE.rst>`_
